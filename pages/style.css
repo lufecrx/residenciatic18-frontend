@@ -7,6 +7,8 @@
 }
 
 body {
+    width: 100%;
+    margin: 0;
     background: linear-gradient(rgb(148, 44, 44), rgb(36, 44, 161));
     background-repeat: no-repeat;
     font-family: 'Roboto', sans-serif;
@@ -14,7 +16,6 @@ body {
 
 /* Conteúdo da página */
 .container {
-    min-width: 28rem;
     max-width: 45rem;
     background: #ecf4ff;
     color: #1c1c1c;
@@ -163,4 +164,53 @@ body {
 
 .codes-section a:hover {
     color: rgb(9, 80, 212);
+}
+
+@media only screen and (max-width: 750px) {
+    .container {
+        padding: 2rem;
+    }
+
+    .perfil {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .imgperfil {
+        max-width: 100%;
+        height: auto; 
+    }
+
+    .info-perfil {
+        margin-left: 0;
+        margin-top: 1rem;
+    }
+
+    .back button {
+        font-size: 0.8rem;
+    }
+
+    .linkProjects {
+        height: auto;
+    }
+
+    .preview {
+        height: auto; 
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .imgperfil {
+        display: none;
+    }
+
+    .preview {
+        display: none;
+    }
+
+    .linkProjects {
+        /* Tirar cor do background */
+        background: none;
+        box-shadow: none;
+    }
 }
