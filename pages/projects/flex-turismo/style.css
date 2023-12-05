@@ -184,6 +184,7 @@ header .menu {
 
 #plans h2 {
     font-size: 32px;
+    margin-bottom: 1rem;
 }
 
 .list-plans {
@@ -275,6 +276,7 @@ footer .footer {
     max-width: 992px;
     margin: auto;
     width: 100%;
+    text-align: justify;
 }
 
 /* área mobile */
