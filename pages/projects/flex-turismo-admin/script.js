@@ -79,6 +79,17 @@ function adicionarViagem(novaViagem) {
     const listaViagens = document.querySelector(".list-plans");
     listaViagens.insertAdjacentHTML("beforeend", novaViagemHTML);
 
+    const btnsCompra = document.querySelectorAll(".comprar-viagem");
+
+    btnsCompra.forEach(function (btn) {
+        btn.addEventListener("click", function (event) {
+            event.preventDefault(); // Evita o comportamento padrão do link
+
+            const destinoId = this.closest(".item-plans").id;
+            capturarInformacoes(destinoId);
+        });
+    });
+
     fecharFormulario();
 }
 
