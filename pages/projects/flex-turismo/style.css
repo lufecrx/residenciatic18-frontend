@@ -248,6 +248,7 @@ header .menu {
 .item-plans .comprar-viagem {
     margin: auto;
     margin-bottom: 20px;
+    border: none;
 }
 
 .list-plans {
