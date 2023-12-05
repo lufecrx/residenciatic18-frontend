@@ -17,8 +17,18 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Referências aos elementos do DOM
     const btnsCompra = document.querySelectorAll(".comprar-viagem");
+    const btnAbrirForm = document.getElementById("abrir-formulario");
     const btnInserir = document.getElementById("inserir-formulario");
+    const btnFechar = document.getElementById("fechar-formulario");
 
+    btnAbrirForm.addEventListener("click", function () {
+        document.getElementById("overlay").style.display = "flex";
+    })
+
+    btnFechar.addEventListener("click", function () {
+        document.getElementById("overlay").style.display = "none";
+    })
+    
     btnInserir.addEventListener("click", function (event) {
         event.preventDefault(); // Evita o comportamento padrão do link
 
