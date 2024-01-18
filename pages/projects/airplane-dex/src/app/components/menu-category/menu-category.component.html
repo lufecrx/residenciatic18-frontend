@@ -1,12 +1,12 @@
 <div class="dex">
   <!-- Category List -->
-  <app-category-list [categoryList]="categoryList" (categorySelected)="filterByCategory($event)"></app-category-list>
+  <app-category [categoryList]="categoryList" (categorySelected)="filterByCategory($event)"></app-category>
 
   <!-- Vehicles List -->
-  <app-vehicles-list [vehiclesList]="vehiclesList" (vehicleSelected)="selectVehicle($event)"></app-vehicles-list>
+  <app-vehicles [vehiclesList]="vehiclesList" (vehicleSelected)="selectVehicle($event)"></app-vehicles>
 
   <!-- Properties List -->
-  <app-properties-list [vehicleSelected]="vehicleSelected" (propertySelected)="selectProperty($event)"></app-properties-list>
+  <app-properties [vehicleSelected]="vehicleSelected" (propertySelected)="selectProperty($event)"></app-properties>
 
   <!-- Value -->
   <app-value [valueProperty]="valueProperty"></app-value>

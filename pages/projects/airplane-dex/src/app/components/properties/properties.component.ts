@@ -3,13 +3,13 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { JumpingEffectDirective } from '../../directives/jumping-effect.directive';
 
 @Component({
-  selector: 'app-properties-list',
+  selector: 'app-properties',
   standalone: true,
   imports: [CommonModule, JumpingEffectDirective],
-  templateUrl: './properties-list.component.html',
-  styleUrls: ['./properties-list.component.css']
+  templateUrl: './properties.component.html',
+  styleUrls: ['./properties.component.css']
 })
-export class PropertiesListComponent {
+export class PropertiesComponent {
   @Input() vehicleSelected: any;
   @Output() propertySelected = new EventEmitter<string>();
 

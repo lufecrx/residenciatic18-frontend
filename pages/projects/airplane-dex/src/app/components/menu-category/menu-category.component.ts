@@ -1,11 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { VehicleService } from '../../services/vehicle.service';
 import { HttpClientModule } from '@angular/common/http';
-import { CategoryListComponent } from '../category-list/category-list.component';
-import { PropertiesListComponent } from '../properties-list/properties-list.component';
+import { CategoryComponent } from '../category/category.component';
+import { PropertiesComponent } from '../properties/properties.component';
 import { ValueComponent } from '../value/value.component';
-import { VehiclesListComponent } from '../vehicles-list/vehicles-list.component';
+import { VehiclesComponent } from '../vehicles/vehicles.component';
 import { ManagerDataService } from '../../services/manager-data.service';
 import { Subscription } from 'rxjs';
 
@@ -28,7 +27,7 @@ interface Vehicle {
 @Component({
   selector: 'app-menu-category',
   standalone: true,
-  imports: [CommonModule, HttpClientModule, CategoryListComponent, PropertiesListComponent, ValueComponent, VehiclesListComponent],
+  imports: [CommonModule, HttpClientModule, CategoryComponent, PropertiesComponent, ValueComponent, VehiclesComponent],
   templateUrl: './menu-category.component.html',
   styleUrl: './menu-category.component.css'
 })

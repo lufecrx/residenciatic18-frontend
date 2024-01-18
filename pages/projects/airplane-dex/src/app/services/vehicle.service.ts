@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 
 export class VehicleService {
-  private readonly vehiclesUrl: string =  '../../assets/vehicles.json';
+  private readonly vehiclesUrl: string =  '/assets/vehicles.json';
 
   constructor(private http: HttpClient) { }
 

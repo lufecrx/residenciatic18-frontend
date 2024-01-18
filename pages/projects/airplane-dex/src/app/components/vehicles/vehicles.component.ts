@@ -4,13 +4,13 @@ import { JumpingEffectDirective } from '../../directives/jumping-effect.directiv
 import { RotatingBackgroundColorDirective } from '../../directives/rotating-background-color.directive';
 
 @Component({
-  selector: 'app-vehicles-list',
+  selector: 'app-vehicles',
   standalone: true,
   imports: [CommonModule, JumpingEffectDirective, RotatingBackgroundColorDirective],
-  templateUrl: './vehicles-list.component.html',
-  styleUrl: './vehicles-list.component.css'
+  templateUrl: './vehicles.component.html',
+  styleUrl: './vehicles.component.css'
 })
-export class VehiclesListComponent {
+export class VehiclesComponent {
   @Input() vehiclesList: any[] = [];
   @Output() vehicleSelected = new EventEmitter<any>();
 

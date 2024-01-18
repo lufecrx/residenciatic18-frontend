@@ -4,13 +4,13 @@ import { HoverStyleDirective } from '../../directives/hover-style.directive';
 import { JumpingEffectDirective } from '../../directives/jumping-effect.directive';
 
 @Component({
-  selector: 'app-category-list',
+  selector: 'app-category',
   standalone: true,
   imports: [CommonModule, HoverStyleDirective, JumpingEffectDirective],
-  templateUrl: './category-list.component.html',
-  styleUrls: ['./category-list.component.css']
+  templateUrl: './category.component.html',
+  styleUrls: ['./category.component.css']
 })
-export class CategoryListComponent {
+export class CategoryComponent {
   @Input() categoryList: string[] = [];
   @Output() categorySelected = new EventEmitter<string>();
 
