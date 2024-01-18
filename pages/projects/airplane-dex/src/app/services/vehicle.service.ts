@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 
 export class VehicleService {
-  private readonly vehiclesUrl: string =  '/assets/vehicles.json';
+  private readonly vehiclesUrl: string =  'https://raw.githubusercontent.com/lufecrx/residenciatic18-frontend/main/pages/assets/files/vehicles.json';
 
   constructor(private http: HttpClient) { }
 
