@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'portfolio';
+
+  projetos = ['Página da UESC', 'Wikipedia API', 'AirplaneDex'];
 }

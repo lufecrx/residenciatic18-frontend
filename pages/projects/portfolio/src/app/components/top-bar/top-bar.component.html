@@ -1,0 +1,9 @@
+<mat-toolbar color="primary">
+  <span>Meus Projetos</span>
+  <!-- routerLink="/projetos/{{ projeto }}" -->
+  <mat-button *ngFor="let projeto of projetos"
+  [ngClass]="{ 'selecionado': projeto === projetoSelecionado }"
+  (click)="selecionarProjeto(projeto)">
+    {{ projeto }}
+  </mat-button>
+</mat-toolbar>
