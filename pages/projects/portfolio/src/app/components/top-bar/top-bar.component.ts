@@ -12,8 +12,7 @@ export class TopBarComponent {
   constructor(private router: Router) {}
 
   selecionarProjeto(projeto: string): void {
-    console.log(`Selecionado o projeto: ${projeto}`);
-
+    this.projetoSelecionado = projeto;
     this.router.navigate([projeto]);
   }
 }

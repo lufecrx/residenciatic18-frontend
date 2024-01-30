@@ -6,7 +6,7 @@ import { WikipediaAppComponent } from './projects/wikipedia-api/app/wikipedia-ap
 import { AirplaneDexAppComponent } from './projects/airplane-dex/app/airplanedex-app.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent }, // Rota padrão apontando para o componente inicial
+  { path: 'home', component: HomeComponent }, // Rota padrão apontando para o componente inicial
   {path: 'uesc-angular', component: UescAngularAppComponent },
   {path: 'wikipedia-api', component: WikipediaAppComponent },
   {path: 'airplane-dex', component: AirplaneDexAppComponent },

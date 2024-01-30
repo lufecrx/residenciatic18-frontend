@@ -12,6 +12,8 @@ import { UescAngularModule } from './projects/uesc-angular/app/uesc-angular-app.
 import { AirplaneDexModule } from './projects/airplane-dex/app/airplanedex-app.module';
 import { RouterModule } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
+import { MatCardModule } from '@angular/material/card';
+import { MatIconModule} from '@angular/material/icon';
 
 @NgModule({
   declarations: [
@@ -26,9 +28,11 @@ import { HomeComponent } from './components/home/home.component';
     BrowserAnimationsModule,
     MatToolbarModule,
     MatButtonModule,
+    MatCardModule,
     WikipediaModule,
     UescAngularModule,
     AirplaneDexModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
