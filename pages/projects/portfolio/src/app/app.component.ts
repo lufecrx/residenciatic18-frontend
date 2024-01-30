@@ -1,12 +1,26 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { NavigationEnd, Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent {
-  title = 'portfolio';
+export class AppComponent implements OnInit {
+  projetoSelecionado: string = '';
 
-  projetos = ['Página da UESC', 'Wikipedia API', 'AirplaneDex'];
+  constructor(private router: Router) { }
+
+  ngOnInit(): void {
+    this.router.events.subscribe((event) => {
+      if (event instanceof NavigationEnd) {
+        this.definirProjetoSelecionado(event.urlAfterRedirects);
+      }
+    });
+  }
+
+  definirProjetoSelecionado(url: string): void {
+    console.log(`Definindo o projeto selecionado: ${url.split('/')[1]}`);
+    this.projetoSelecionado = url.split('/')[1];
+  }
 }

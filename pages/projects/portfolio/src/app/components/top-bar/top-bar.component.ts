@@ -1,15 +1,19 @@
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-top-bar',
   templateUrl: './top-bar.component.html',
-  styleUrl: './top-bar.component.css'
+  styleUrls: ['./top-bar.component.css']
 })
 export class TopBarComponent {
-  @Input() projetos: string[] = [];
   @Input() projetoSelecionado: string = '';
 
-  selecionarProjeto(projeto: string) {
-    this.projetoSelecionado = projeto;
+  constructor(private router: Router) {}
+
+  selecionarProjeto(projeto: string): void {
+    console.log(`Selecionado o projeto: ${projeto}`);
+
+    this.router.navigate([projeto]);
   }
 }
