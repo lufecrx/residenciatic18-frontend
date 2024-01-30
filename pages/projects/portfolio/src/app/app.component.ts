@@ -20,7 +20,6 @@ export class AppComponent implements OnInit {
   }
 
   definirProjetoSelecionado(url: string): void {
-    console.log(`Definindo o projeto selecionado: ${url.split('/')[1]}`);
     this.projetoSelecionado = url.split('/')[1];
   }
 }
