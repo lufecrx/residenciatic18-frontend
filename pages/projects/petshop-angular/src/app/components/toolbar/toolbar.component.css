@@ -1,0 +1,21 @@
+
+/* Estilizando a barra de ferramentas */
+.mat-toolbar {
+  display: flex;
+  justify-content: space-between; /* Alinha os itens à esquerda e à direita */
+  align-items: center; /* Centraliza verticalmente os itens */
+  padding: 0 20px; /* Adiciona um espaçamento interno */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra */
+}
+
+/* Estilizando os botões */
+.mat-toolbar button {
+  margin-left: 10px; /* Adiciona um espaçamento entre os botões */
+}
+
+/* Estilizando o título */
+.mat-toolbar span:first-child {
+  font-size: 24px; /* Tamanho da fonte */
+  font-weight: bold; /* Negrito */
+  color: #fff; /* Cor do texto */
+}
