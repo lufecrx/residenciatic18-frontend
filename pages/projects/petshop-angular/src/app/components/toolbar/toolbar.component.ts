@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { AuthService } from '../../services/auth.service';
+import { MatMenuTrigger } from '@angular/material/menu';
 
 @Component({
   selector: 'app-toolbar',
@@ -7,6 +8,8 @@ import { AuthService } from '../../services/auth.service';
   styleUrl: './toolbar.component.css',
 })
 export class ToolbarComponent {
+  @ViewChild(MatMenuTrigger) menuTrigger!: MatMenuTrigger;
+
   constructor(private authService: AuthService) {}
 
   isAuthenticated() {
