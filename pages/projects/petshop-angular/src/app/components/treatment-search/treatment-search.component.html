@@ -6,7 +6,7 @@
       <mat-icon>close</mat-icon>
     </button>
   </mat-form-field>
-  <button mat-icon-button class="search-button" (click)=" onEnter()">
+  <button mat-icon-button class="search-button" *ngIf="!isSmallScreen()" (click)="onEnter()">
     <mat-icon>search</mat-icon>
   </button>
 </div>

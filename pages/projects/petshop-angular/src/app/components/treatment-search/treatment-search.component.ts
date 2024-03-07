@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { Treatment } from '../../model/treatment';
 import { Router } from '@angular/router';
 
@@ -22,5 +22,16 @@ export class TreatmentSearchComponent {
 
   clearSearch(): void {
     this.searchTerm = '';
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any) {
+    // Recalcula o tamanho da tela quando a janela é redimensionada
+    this.isSmallScreen();
+  }
+
+  isSmallScreen(): boolean {
+    // Retorna true se a largura da tela for menor que 600 pixels
+    return window.innerWidth < 600;
   }
 }
